@@ -1,7 +1,8 @@
 function User(data) {
-  const { name, age } = data
+  const { name, age, birthday } = data
   this.name = name
   this.age = age
+  this.birthday = birthday
 }
 
 User.prototype.setName = function(name) {
