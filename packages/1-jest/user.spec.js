@@ -9,7 +9,7 @@ describe('Entity: User', () => {
       birthday: new Date(1991, 0, 29),
     })
   })
-  it.only('correctly set name, age, and birthday via ctor', () => {
+  it('correctly set name, age, and birthday via ctor', () => {
     expect(user.name).toBe('adrian')
     expect(user.age).toBe(17)
     expect(user.birthday).toEqual(expect.any(Date))
