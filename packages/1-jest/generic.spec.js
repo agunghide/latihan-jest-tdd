@@ -1,4 +1,5 @@
 const { Generic } = require('./generic')
+const { ctorArgs } = require('./fixtures/generic')
 
 describe('Entity: Generic', () => {
   it('#1: correctly set each ctor argument', () => {
@@ -54,20 +55,7 @@ describe('Entity: Generic', () => {
   })
 
   it('#3: correctly set each ctor argument', () => {
-    const args = {
-      str: 'today',
-      int: 42,
-      bool: true,
-      fn: (arg) => console.log(arg),
-      arr: [6, 1, 2022],
-      obj: {
-        date: '6th',
-        month: 'Jan',
-        year: 2022,
-      } 
-    }
-    const gen = new Generic(args)
-
-    expect(gen).toEqual(args)
+    const gen = new Generic(ctorArgs)
+    expect(gen).toEqual(ctorArgs)
   })
 })
