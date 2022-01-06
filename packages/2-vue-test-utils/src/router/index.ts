@@ -10,6 +10,11 @@ const routes: Array<RouteConfig> = [
     name: 'Home',
     component: Home
   },
+  {
+    path: '/exercise',
+    name: 'Exercise',
+    component: () => import('../views/Exercise.vue'),
+  },
 ]
 
 const router = new VueRouter({
