@@ -10,11 +10,7 @@
       <button type="button" role="clear" @click="clearAll">Clear All</button>
     </header>
     <div>
-      <GithubUserListItem />
-      <GithubUserListItem />
-      <GithubUserListItem />
-      <GithubUserListItem />
-      <GithubUserListItem />
+      <GithubUserListItem :index="1" @remove="remove" @duplicate="duplicate" />
     </div>
   </div>
 </template>
@@ -47,6 +43,14 @@ export default Vue.extend({
 
     clearAll(){
       this.users = []
+    },
+
+    remove(index: number){
+      console.log(index)
+    },
+
+    duplicate(index: number){
+      console.log(index)
     }
   },
 });

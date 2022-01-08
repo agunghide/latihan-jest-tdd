@@ -1,10 +1,10 @@
 <template>
   <li class="gh-list-item">
     <div class="gh-list-item__actions">
-      <button role="duplicate">
+      <button role="duplicate" @click="$emit('duplicate', index)">
         Duplicate
       </button>
-      <button role="remove">
+      <button role="remove" @click="$emit('remove', index)">
         Remove
       </button>
     </div>
@@ -44,7 +44,12 @@
 
 <script>
 export default {
-
+  props: {
+    index: {
+      type: Number,
+      required: true
+    },
+  },
 }
 </script>
 
